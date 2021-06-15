@@ -25,7 +25,7 @@ public class Day13_ReadExcel {
 //        Go to second cell on that first row and print-CAPITAL
         Cell capitalCell=firstRow.getCell(1);
         System.out.println(capitalCell);
-//        Go to 2nd row first cell R1C0. WE CAN CHAIN THE METHODS
+//        Go to 2nd row first cell R1C0. WE CAN CHAIN THE ME    THODS
         Cell usaCell=sheet.getRow(1).getCell(0);
 //      Data type usaCell Cell. I can convert this to a string to using string manupilation, lowercase, substring,charAt,...
         String usaCellString=usaCell.toString();
