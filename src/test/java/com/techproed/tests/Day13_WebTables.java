@@ -27,7 +27,7 @@ Create a test method: printData(int row, int column); This method should print t
     Day11_DefaultPage defaultPage;
     Day12_HotelRoomPage hotelRoomPage;
     //Login teh application:
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp(){
         loginPage= new Day11_LoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("application_login_url"));
@@ -80,7 +80,7 @@ Create a test method: printData(int row, int column); This method should print t
         WebElement forthRow=Driver.getDriver().findElement(By.xpath("//tbody//tr[4]"));
         System.out.println("4th Row : "+forthRow.getText());
     }
-    @Test
+    @Test(groups = "regression")
     public void printCells(){
         //        Create a test method: printCells()
         //        and a the total number of cells in the table body
@@ -94,7 +94,7 @@ Create a test method: printData(int row, int column); This method should print t
             count++;
         }
     }
-    @Test
+    @Test(groups = "regression")
     public void printColumns(){
         System.out.println("*****PRINT ALL COLUMNS*****");
 //        Create a test method: printColumns()
@@ -119,7 +119,6 @@ Create a test method: printData(int row, int column); This method should print t
         //        row:2   column:3
         ////tbody//tr[6]//td[5]
         //         row:6   column:4
-
 //        IN GENERAL://                   //tbody//tr[row]//td[column]
         //                 "//tbody//tr[" + row + "]//td[" +column+"]"
         String dynamicXpath="//tbody//tr["+row+"]//td["+column+"]";
@@ -136,7 +135,7 @@ Create a test method: printData(int row, int column); This method should print t
         printData(4,6);//"//tbody//tr[4]//td[6]";
         printData(7,7);//"//tbody//tr[7]//td[7]";
     }
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown(){
         Driver.getDriver().close();
     }
