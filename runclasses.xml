@@ -13,9 +13,5 @@
         </classes>
     </test>
 
-    <test name="Hotel Room Creating">
-        <classes>
-            <class name="com.techproed.tests."/>
-        </classes>
-    </test>
+
 </suite>
