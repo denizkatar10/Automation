@@ -15,23 +15,6 @@ public class Day11_DefaultPage {
     public WebElement hotelRooms;
     @FindBy(xpath = "(//span)[1]")
     public WebElement userID;
-    @FindBy(id = "IDHotel")
-    public WebElement hotelIdDropdown;
-    @FindBy(id = "Code")
-    public WebElement code;
-    @FindBy(id = "Name")
-    public WebElement name;
-    @FindBy(id = "Location")
-    public WebElement location;
-    @FindBy(id = "IDGroupRoomType")
-    public WebElement description;
-    @FindBy(id = "MaxAdultCount")
-    public WebElement maxAdultCount;
-    @FindBy(id = "MaxChildCount")
-    public WebElement maxChildCount;
-    @FindBy(id= "IsAvailable")
-    public WebElement isApprovedCheckbox;
-    @FindBy(id= "btnSubmit")
-    public WebElement saveButton;
-
+    @FindBy(partialLinkText = "Room reservations")
+    public WebElement roomReservations;
 }
